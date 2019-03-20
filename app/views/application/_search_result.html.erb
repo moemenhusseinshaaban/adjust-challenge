@@ -1,0 +1,10 @@
+<%= render partial: 'repo', collection: @repositories.attrs[:items] %>
+<br>
+<% if @prev.present? %>
+  <%= link_to 'First', search_pagination_url(1)  %>
+  <%= link_to 'Previous', search_pagination_url(@prev) %>
+<% end %>
+<% if @next.present? %>
+  <%= link_to 'Next', search_pagination_url(@next) %>
+  <%= link_to 'Last', search_pagination_url(@last) %>
+<% end %>
